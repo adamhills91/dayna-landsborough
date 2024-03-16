@@ -1,0 +1,118 @@
+@use "../abstracts/breakpoints" as *;
+
+:root {
+  //-------------------------------------
+  // Colours
+  //-------------------------------------
+
+  --c-cream: #f6f5ed;
+  --c-cream-dark: #e6e6db;
+  --c-sage-green: #a3c3b3;
+  --c-sage-green-dark: #749585;
+  --c-pastel-pink: #e7bcb7;
+  --c-black: #1e262c;
+  --c-green-dark: #364248;
+  --c-white: #fff;
+
+  --c-brand: var(--c-sage-green);
+  --c-text: var(--c-black);
+  --c-link: var(--c-brand);
+  --c-link-hover: var(--c-brand);
+  --c-background: var(--c-cream);
+  --c-alt-background: var(--c-cream-dark);
+  --c-highlight: var(--c-brand);
+
+  //-------------------------------------
+  // Font Faces
+  //-------------------------------------
+
+  --ff-body: "Poppins", sans-serif;
+  --ff-title: "Roboto Serif", serif;
+  --ff-subtitle: "Poppins", sans-serif;
+  --ff-link: "Roboto", sans-serif;
+  --ff-button: "DIN Condensed", sans-serif;
+
+  //-------------------------------------
+  // Font Sizes
+  //-------------------------------------
+
+  --fs-h1: 4rem;
+  --fs-h2: 2.5rem;
+  --fs-h3: 2.8rem;
+  --fs-h4: 2rem;
+  --fs-body: 1.6rem;
+  --fs-logo: 2.5rem;
+  --fs-link: var(--fs-body);
+  --fs-button: 1.8rem;
+  --fs-subtitle: 1.6rem;
+
+  //-------------------------------------
+  // Letter Spacing
+  //-------------------------------------
+
+  --ls-h1: 0;
+  --ls-h2: 0.04em;
+  --ls-h3: 0.02em;
+  --ls-h4: 0.04em;
+  --ls-body: -0.02em;
+  --ls-link: var(--ls-body);
+  --ls-button: 0.04em;
+
+  //-------------------------------------
+  // Line Heights
+  //-------------------------------------
+
+  --lh-h1: normal;
+  --lh-h2: normal;
+  --lh-h3: normal;
+  --lh-h4: normal;
+  --lh-body: 2.12;
+  --lh-link: var(--lh-body);
+  --lh-button: var(--lh-body);
+  --lh-subtitle: 1.5;
+
+  //-------------------------------------
+  // Site Flow
+  //-------------------------------------
+
+  --site-padding: 20px;
+  --gap: 4rem;
+
+  @include screen(md) {
+    //-------------------------------------
+    // Font Sizes
+    //-------------------------------------
+
+    --fs-h1: 5rem;
+    --fs-h2: 4rem;
+    --fs-body: 1.6rem;
+    --fs-subtitle: 2rem;
+
+    //-------------------------------------
+    // Site Flow
+    //-------------------------------------
+
+    --site-padding: 40px;
+    --gap: 50px;
+  }
+
+  @include screen(lg) {
+    //-------------------------------------
+    // Font Sizes
+    //-------------------------------------
+
+    --fs-h1: 6rem;
+    --fs-h2: 4.4rem;
+    --fs-body: 1.6rem;
+    --fs-button: 2rem;
+    --fs-subtitle: 2.5rem;
+
+    //-------------------------------------
+    // Site Flow
+    //-------------------------------------
+
+    --site-padding: 80px;
+
+    --gap: 7rem;
+  }
+}

@@ -1,0 +1,46 @@
+@use "../abstracts" as *;
+
+section#dual-column {
+  background: var(--c-cream-dark);
+
+  .wrapper {
+    padding-top: 70px;
+    padding-bottom: 70px;
+    display: flex;
+    flex-direction: column;
+    gap: 80px;
+    max-width: 850px;
+    margin: 0 auto;
+
+    @include screen(md) {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 20px;
+    }
+
+    @include screen(lg) {
+      max-width: unset;
+      gap: 80px;
+    }
+
+    .col {
+      max-width: 600px;
+      margin: 0 auto;
+      padding: 0 var(--site-padding);
+
+      @include screen(lg) {
+        max-width: 500px;
+        padding: 0;
+      }
+
+      h2 {
+        margin-bottom: 1em;
+        text-align: left;
+      }
+
+      ul {
+        margin-bottom: 2em;
+      }
+    }
+  }
+}

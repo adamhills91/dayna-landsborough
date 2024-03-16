@@ -1,0 +1,22 @@
+@use "../abstracts" as *;
+
+.error-404 {
+  .container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    min-height: 60vh;
+    max-width: 750px;
+    margin: 0 auto;
+    gap: 5rem;
+
+    h1 {
+    }
+
+    .button {
+      margin: 0 auto;
+    }
+  }
+}

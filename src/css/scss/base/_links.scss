@@ -1,0 +1,13 @@
+@use "../abstracts" as *;
+
+a {
+  color: var(--c-link);
+  text-decoration: none;
+  transition: color 0.2s ease;
+  font-family: var(--ff-link);
+  letter-spacing: var(--ls-link);
+
+  &:hover {
+    color: var(--c-link-hover);
+  }
+}

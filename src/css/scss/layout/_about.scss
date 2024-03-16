@@ -1,0 +1,55 @@
+@use "../abstracts" as *;
+
+section#about {
+  .wrapper {
+    padding-top: 70px;
+    padding-bottom: 140px;
+    max-width: 1200px;
+
+    @include screen(lg) {
+      flex-direction: row-reverse;
+      align-items: center;
+      justify-content: space-between;
+      gap: 100px;
+    }
+
+    .text-container {
+      @include screen(lg) {
+        max-width: 500px;
+      }
+    }
+
+    .image-container {
+      position: relative;
+      width: fit-content;
+      margin: 0 auto;
+      max-width: 400px;
+
+      @include screen(lg) {
+        margin: unset;
+      }
+
+      &::after {
+        content: url(/src/assets/svg/blob-pink.svg);
+        position: absolute;
+        bottom: -20%;
+        right: -20%;
+        z-index: -1;
+        overflow: hidden;
+      }
+
+      img {
+        border-radius: 20px;
+      }
+    }
+
+    .button {
+      margin: 75px auto 75px;
+
+      @include screen(lg) {
+        margin: unset;
+        margin-top: 3em;
+      }
+    }
+  }
+}

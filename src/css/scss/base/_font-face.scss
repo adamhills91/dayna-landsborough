@@ -1,0 +1,29 @@
+@font-face {
+  font-family: "Roboto Serif";
+  src: url("/src/assets/fonts/roboto/RobotoSerif-Regular.woff2"),
+    url("/src/assets/fonts/roboto/RobotoSerif-Regular.woff");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Poppins";
+  src: url("/src/assets/fonts/poppins/Poppins-Regular.woff2"),
+    url("/src/assets/fonts/poppins/Poppins-Regular.woff");
+  font-weight: 400;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Poppins";
+  src: url("/src/assets/fonts/poppins/Poppins-Bold.woff2"),
+    url("/src/assets/fonts/poppins/Poppins-Bold.woff");
+  font-weight: 700;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "DIN Condensed";
+  src: url("/src/assets/fonts/din-condensed/DINCondensed-Bold.woff2"),
+    url("/src/assets/fonts/din-condensed/DINCondensed-Bold.woff");
+  font-display: swap;
+}

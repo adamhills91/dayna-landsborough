@@ -1,0 +1,20 @@
+{
+  "name": "dayna-landsborough",
+  "version": "1.0.0",
+  "description": "Dayna Landsborough's website",
+  "main": "index.js",
+  "scripts": {
+    "sass:watch": "sass --watch --style=compressed src/css/scss:src/css",
+    "sass:build": "sass --style=compressed src/css/scss:src/css",
+    "esbuild:watch": "esbuild --watch src/js/scripts.js --bundle --minify --outfile=src/js/scripts.min.js --format=cjs",
+    "esbuild:build": "esbuild src/js/scripts.js --bundle --minify --outfile=src/js/scripts.min.js --format=cjs"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "esbuild": "^0.20.1"
+  },
+  "dependencies": {
+    "gsap": "^3.12.5"
+  }
+}

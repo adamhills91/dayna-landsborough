@@ -1,0 +1,89 @@
+@use "../abstracts" as *;
+
+section#contact {
+  .wrapper {
+    padding-top: 70px;
+    padding-bottom: 70px;
+
+    @include screen(lg) {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-auto-rows: auto;
+      gap: 40px;
+    }
+
+    .title-container {
+      @include screen(lg) {
+        margin-left: unset;
+        margin-right: unset;
+
+        grid-column: 1 / 3;
+      }
+    }
+
+    p {
+      @include screen(lg) {
+        margin: unset;
+        max-width: unset;
+        grid-column: 1 / 2;
+        max-width: 600px;
+      }
+    }
+
+    .image-container {
+      margin: 40px auto;
+
+      @include screen(lg) {
+        grid-column: 1 / 2;
+        max-width: 600px;
+      }
+    }
+
+    .form-container {
+      background: var(--c-cream-dark);
+      border-radius: 20px;
+      padding: calc(var(--site-padding) * 2) var(--site-padding);
+      max-width: 600px;
+      margin: 0 auto;
+
+      @include screen(lg) {
+        grid-column: 2 / 3;
+        grid-row: 2 / 4;
+
+        padding: 40px;
+      }
+
+      form {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+
+        .input {
+          display: flex;
+          flex-direction: column;
+
+          label {
+            font-weight: 600;
+            font-size: 14px;
+            margin-bottom: 0.5em;
+          }
+
+          input,
+          textarea {
+            border-radius: 5px;
+            border: none;
+            padding: 1em;
+
+            &:focus-visible {
+              outline: none;
+            }
+          }
+        }
+
+        button {
+          margin-top: 1em;
+        }
+      }
+    }
+  }
+}

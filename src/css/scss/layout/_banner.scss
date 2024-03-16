@@ -1,0 +1,52 @@
+@use "../abstracts" as *;
+
+section.banner {
+  &.green {
+    background: var(--c-sage-green);
+  }
+
+  &.pink {
+    background: var(--c-pastel-pink);
+
+    .wrapper {
+      .plant-bg {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        opacity: 0.3;
+        width: 125px;
+        transform: scaleX(-1);
+      }
+    }
+  }
+
+  .wrapper {
+    padding-top: 70px;
+    padding-bottom: 185px;
+    text-align: center;
+    gap: 50px;
+    position: relative;
+
+    @include screen(md) {
+      padding-bottom: 130px;
+    }
+
+    h3,
+    p {
+      max-width: 60rem;
+      margin: 0 auto;
+
+      @include screen(lg) {
+        max-width: 75rem;
+      }
+    }
+
+    .plant-bg {
+      position: absolute;
+      bottom: 0;
+      right: 0;
+      opacity: 0.3;
+      width: 125px;
+    }
+  }
+}

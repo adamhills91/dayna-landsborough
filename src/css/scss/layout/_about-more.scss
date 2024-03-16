@@ -1,0 +1,84 @@
+@use "../abstracts" as *;
+
+section#about-more {
+  .wrapper {
+    padding-top: 70px;
+    padding-bottom: 70px;
+
+    @include screen(lg) {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 40px 120px;
+    }
+
+    .title-container {
+      @include screen(lg) {
+        margin-left: unset;
+        margin-right: unset;
+        grid-column: span 2;
+      }
+    }
+
+    .image-container {
+      position: relative;
+      width: fit-content;
+      margin: 0 auto;
+      max-width: 400px;
+
+      @include screen(lg) {
+        grid-column: 2 / 3;
+      }
+
+      &.with-mark {
+        margin-top: 100px;
+        margin-bottom: 70px;
+
+        @include screen(lg) {
+          margin-top: unset;
+        }
+
+        &::after {
+          content: "";
+          background-image: url(/src/assets/svg/blob-green.svg);
+          background-size: 100% 100%; /* or contain, depending on your preference */
+          position: absolute;
+          top: -20%;
+          left: -20%;
+          z-index: -1;
+          width: 100%;
+          height: 60%;
+        }
+
+        img {
+          border-radius: 20px;
+        }
+      }
+    }
+
+    .copy-container {
+      @include screen(lg) {
+        grid-column: 1 / 2;
+        grid-row: 2 / 3;
+      }
+    }
+
+    .bacp-container {
+      margin: 70px auto;
+      text-align: center;
+      max-width: 380px;
+
+      @include screen(lg) {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        align-items: center;
+        gap: 30px;
+        max-width: unset;
+        text-align: left;
+      }
+    }
+
+    button {
+      margin: 75px auto 75px;
+    }
+  }
+}
