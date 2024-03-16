@@ -49,14 +49,6 @@ header {
         gap: 10px;
       }
 
-      img {
-        max-height: 4rem;
-
-        @include screen(lg) {
-          max-height: unset;
-        }
-      }
-
       span {
         font-size: 2rem;
         color: var(--c-text);
@@ -102,6 +94,7 @@ header {
     gap: 5px;
     position: relative;
     z-index: 1000;
+    cursor: pointer;
 
     @include screen(lg) {
       display: none;

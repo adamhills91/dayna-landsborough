@@ -10,7 +10,7 @@ const navLinks = header.querySelectorAll(".nav-link");
 menuToggle.addEventListener("click", toggleNav);
 
 navLinks.forEach((link) => {
-  if (window.innerWidth < 768) {
+  if (window.innerWidth < 1024) {
     link.addEventListener("click", toggleNav);
   }
 });
