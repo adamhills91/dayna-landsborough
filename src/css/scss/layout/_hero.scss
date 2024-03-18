@@ -11,6 +11,11 @@ section#hero {
 
   @include screen(md) {
     background-position: 125% 80%;
+    background-size: 120% 150%;
+  }
+
+  @include screen(md) {
+    background-size: 120% min(150%, 1200px);
   }
 
   .wrapper {
@@ -18,7 +23,8 @@ section#hero {
     display: flex;
     flex-direction: column;
     gap: 40px;
-    min-height: calc(100vh - 94px);
+    height: calc(100vh - 94px);
+    max-height: 800px;
 
     @include screen(md) {
       padding: 70px var(--site-padding);
@@ -27,10 +33,36 @@ section#hero {
 
     @include screen(lg) {
       display: grid;
-      grid-template-columns: repeat(2, auto);
+      grid-template-columns: repeat(2, 1fr);
       grid-auto-rows: max-content;
-      min-height: calc(100vh - 106px);
+      height: calc(100vh - 106px);
+      max-height: 1000px;
       align-content: center;
+    }
+
+    h1 {
+      text-wrap: nowrap;
+
+      @include screen(lg) {
+        font-size: 4rem;
+      }
+
+      @include screen(xl) {
+        font-size: 6rem;
+      }
+
+      span {
+        display: block;
+        font-size: 0.6em;
+        line-height: normal;
+        letter-spacing: 0.04em;
+        font-family: inherit;
+
+        @include screen(lg) {
+          margin: 0;
+          margin-top: 0.2em;
+        }
+      }
     }
 
     .image-container {
@@ -66,35 +98,39 @@ section#hero {
     }
 
     .copy-container {
+      margin: 0 auto;
+
       @include screen(lg) {
         grid-column: 1 / 2;
+        margin: 0;
       }
 
       p {
         text-align: center;
-        max-width: 275px;
+        max-width: 400px;
         margin: 0 auto;
         line-height: 1.63;
 
-        @include screen(md) {
-          max-width: 350px;
-        }
-
         @include screen(lg) {
-          max-width: unset;
+          // max-width: 500px;
           margin: unset;
           text-align: left;
-          font-size: 2.2rem;
+          font-size: 1.8rem;
+        }
+
+        @include screen(xl) {
+          font-size: 2rem;
+          max-width: 500px;
         }
       }
     }
+  }
 
-    .button {
-      @include screen(lg) {
-        grid-column: 1 / 2;
-        margin: unset;
-        font-size: 2rem;
-      }
+  .button {
+    @include screen(lg) {
+      grid-column: 1 / 2;
+      margin: unset;
+      font-size: 2rem;
     }
   }
 }

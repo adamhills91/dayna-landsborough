@@ -41,11 +41,3 @@ tl.fromTo("#hero h1", { opacity: 0 }, { opacity: 1, delay: 0.2 })
     { opacity: 1, x: 0 },
     "<+=0.2"
   );
-
-// ScrollTrigger to trigger the timeline
-ScrollTrigger.create({
-  trigger: ".container",
-  start: "top 80%",
-  animation: tl,
-  toggleActions: "play none none reverse",
-});
