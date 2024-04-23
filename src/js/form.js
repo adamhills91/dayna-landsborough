@@ -9,8 +9,15 @@ const handleSubmit = (event) => {
     headers: { "Content-Type": "application/x-www-form-urlencoded" },
     body: new URLSearchParams(formData).toString(),
   })
-    .then(() => alert("Thank you for your submission"))
-    .catch((error) => alert(error));
+    .then(
+      () =>
+        (document.querySelector(".form-submit-message").textContent =
+          "Thank you for your message, I'll respond as soon as possible.")
+    )
+    .catch(
+      (error) =>
+        (document.querySelector(".form-submit-message").textContent = error)
+    );
 };
 
 document.querySelector("form").addEventListener("submit", handleSubmit);
