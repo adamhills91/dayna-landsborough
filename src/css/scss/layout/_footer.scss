@@ -47,6 +47,11 @@ footer {
         }
 
         a {
+          transition: opacity 0.2s ease;
+
+          &:hover {
+            opacity: 0.7;
+          }
           img {
             width: 32px;
             height: 32px;
@@ -75,6 +80,7 @@ footer {
 
     .copyright-container {
       text-align: center;
+      justify-self: flex-end;
 
       @include screen(lg) {
         text-align: left;
@@ -87,6 +93,33 @@ footer {
 
         @include screen(md) {
           font-size: 1.4rem;
+        }
+
+        @include screen(lg) {
+          max-width: unset;
+        }
+      }
+    }
+
+    .privacy-policy-container {
+      a {
+        display: block;
+        text-align: center;
+        color: var(--c-text);
+        line-height: normal;
+        font-size: 1.2rem;
+        font-family: var(--ff-body);
+        text-decoration: underline;
+        text-underline-offset: 0.1em;
+        transition: opacity 0.2s ease;
+
+        &:hover {
+          opacity: 0.7;
+        }
+
+        @include screen(md) {
+          font-size: 1.4rem;
+          text-align: left;
         }
 
         @include screen(lg) {

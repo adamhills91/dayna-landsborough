@@ -1,0 +1,44 @@
+@use "../abstracts" as *;
+
+.privacy-policy {
+  margin-top: 100px;
+  margin-bottom: 30px;
+
+  @include screen(md) {
+    margin-top: 150px;
+    margin-bottom: 50px;
+  }
+
+  @include screen(lg) {
+    margin-top: 200px;
+    margin-bottom: 100px;
+  }
+
+  h1 {
+    text-align: center;
+    margin-bottom: 1em;
+  }
+
+  p {
+    max-width: 800px;
+  }
+
+  .policy {
+    margin: 2em auto;
+    max-width: 800px;
+
+    h2 {
+      text-align: left;
+      font-size: 20px;
+      margin-bottom: 1em;
+      margin-top: 3em;
+      text-wrap: wrap;
+    }
+
+    ol {
+      li {
+        margin-bottom: 1em;
+      }
+    }
+  }
+}
