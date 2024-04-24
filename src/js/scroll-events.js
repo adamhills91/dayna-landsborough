@@ -31,13 +31,15 @@ const tl = gsap.timeline({
   },
 });
 
-// Add animations to the timeline
-tl.fromTo("#hero h1", { opacity: 0 }, { opacity: 1, delay: 0.2 })
-  .fromTo("#hero .copy-container", { opacity: 0 }, { opacity: 1 }, "<+=0.2")
-  .fromTo("#hero .button", { opacity: 0 }, { opacity: 1 }, "<+=0.2")
-  .fromTo(
-    "#hero .image-container",
-    { opacity: 0, x: 100 },
-    { opacity: 1, x: 0 },
-    "<+=0.2"
-  );
+if (document.querySelector("#hero h1")) {
+  // Add animations to the timeline
+  tl.fromTo("#hero h1", { opacity: 0 }, { opacity: 1, delay: 0.2 })
+    .fromTo("#hero .copy-container", { opacity: 0 }, { opacity: 1 }, "<+=0.2")
+    .fromTo("#hero .button", { opacity: 0 }, { opacity: 1 }, "<+=0.2")
+    .fromTo(
+      "#hero .image-container",
+      { opacity: 0, x: 100 },
+      { opacity: 1, x: 0 },
+      "<+=0.2"
+    );
+}

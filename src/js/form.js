@@ -19,4 +19,6 @@ const handleSubmit = (event) => {
     });
 };
 
-document.querySelector("form").addEventListener("submit", handleSubmit);
+if (document.querySelector("form")) {
+  document.querySelector("form").addEventListener("submit", handleSubmit);
+}
